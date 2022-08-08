@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+}
+#slideImg{
+    width: 100%;
+    height: 100%;
+    animation:zoom 3s linear infinite ;
+
+}
+@keyframes zoom {
+    0%{
+        background-image: url('https://images.squarespace-cdn.com/content/v1/59a706d4f5e2319b70240ef9/1598971164694-F75Y7VUAHC6TLFJXLCWF/veggies.jpg');
+        transform:scale(1.3);
+    }
+    15%{
+        background-image: url("https://www.investopedia.com/thmb/mWZXpIXSdRMJQjK4Hu39casLWBc=/680x440/filters:fill(auto,1)/thinkstockphotos-151513663-5bfc353e4cedfd0026c2e3a8.jpg")
+        transform : scale(1);
+    }
+    85%{
+        transform : scale(1);
+    }
+    100%{
+        
+        transform: scale(1.3);
+    }
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)); */
+    position: absolute;
+    top:0;
+}
+.navbar{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin: 35px auto;
+}
+
+.logo img{
+  width: 100px;
+  top:0;
+  left:0;
+  position:fixed;
+}
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 20px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: rgb(18, 17, 18);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color:white;
+}
+
+
+.content{
+    width: 60%;
+    margin: 160px auto 0;
+    text-align: center;
+    color: rgb(250, 234, 7);
+}
+.content h1{
+font-size: 60px;
+    }
+    .content h3{
+        width: 80%;
+        margin: 20px auto 100px;
+        font-weight: 100;
+        line-height: 25px;
+ 
+    }
+    button{
+        width: 200px;
+        padding:15px;
+        text-align: center;
+        margin:0 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid orange;
+        background: orange;
+        color:#fff;
+        cursor: pointer;
+        transition: background 0.5s;
+        
+    }
+    button:hover{
+        background: transparent;
+        border: 2px solid #fff;
+    }
+  
+  /* Main Navigation */
+#nav {
+    position:right;
+    width:620px;
+    margin:0 auto;
+    margin-top:50px;
+    padding:10px;
+    float:right;
+}
+ 
+ul#navigation {
+    margin:0px auto;
+    position:absolute;
+    float:right;
+}
+ 
+ul#navigation li {
+    font-size:20px;
+    font-weight:bold;
+    margin:0;
+    padding:10px;
+    float:right;
+}
+ 
+ul#navigation li a {
+    padding:10px 25px;
+    color:#0c0c0c;
+    text-decoration:none;
+    background:none;
+    -webkit-transition:color 0.2s linear, background 0.2s linear;
+    -moz-transition:color 0.2s linear, background 0.2s linear;
+    -o-transition:color 0.2s linear, background 0.2s linear;
+    transition:color 0.2s linear, background 0.2s linear;
+    float:right;
+}
+ 
+ul#navigation li a:hover {
+    background:none;
+    color:#282828;
+}
+ 
+ul#navigation li a.first {
+    border-left: 0 none;
+
+}
+ 
+ul#navigation li a.last {
+    border-right: 0 none;
+}
+ 
+ul#navigation li:hover > a {
+    background:#fff;
+}
+/* Drop-Down Navigation */
+ul#navigation li:hover > ul
+{
+/*these 2 styles are very important,
+being the ones which make the drop-down to appear on hover */
+    visibility:visible;
+    opacity:1;
+}
+ 
+ul#navigation ul, ul#navigation ul li ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+/*the next 2 styles are very important,
+being the ones which make the drop-down to stay hidden */
+    visibility:hidden;
+    opacity:0;
+    position: absolute;
+    z-index: 99999;
+    width:180px;
+    background:none;
+    float:right;
+/* css3 transitions for smooth hover effect */
+    -webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -o-transition:opacity 0.2s linear, visibility 0.2s linear;
+    transition:opacity 0.2s linear, visibility 0.2s linear;
+}
+ 
+ul#navigation ul {
+    top: 43px;
+    left: 1px;
+}
+ 
+ul#navigation ul li ul {
+    top: 0;
+    left: 181px; /* strong related to width:180px; from above */
+    font-size:20px;
+}
+ 
+ul#navigation ul li {
+    clear:both;
+    width:100%;
+}
+ 
+ul#navigation ul li a {
+    background:none;
+    padding:7px 15px;
+    color:#616161;
+    text-decoration:none;
+    float:left;
+    clear:both;
+    width:150px;
+    font-size: 20px;
+    color: #0c0c0c;
+}
+.pp{
+    background-color: aquamarine;
+}
+.pp a{
+    text-align:center;
+    float:center;
+    margin-left:45%;
+    font-size:20px;
+    font-weight:bold;
+}
+.pp h5{
+    text-align: center;
+}
+ .navigation{
+    position: absolute;
+    top:8px;
+    right: 16px;
+    
+ } 
